@@ -111,7 +111,6 @@ html{
 
 .App-navigation-item{
    font-size: 2.1rem;
-   color: #fff;
    text-transform: uppercase;
    margin-left: 2rem;
    cursor: pointer;
@@ -126,5 +125,49 @@ html{
 .App-navigation-item:hover{
   background-color: #46d0ff;
   color: #ccc;
+}
+
+.App-navigation-item a{
+  text-decoration: none;
+  color: #fff;
+}
+
+
+.App-items{
+  margin: 0 15rem;
+  box-shadow: 0 2rem 5rem rgba(0,0,0,.1);
+  background-color: #fff;
+}
+
+.App-item{
+  display: flex;
+  border-top: 1px solid #eee;
+  margin-bottom: 2px;
+  padding: 3rem 5rem;
+  padding-right: 20rem;
+  justify-content: space-between;
+  font-size: 1.9rem;
+}
+
+.App-item-description{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.App-item-title{
+  transition: all .2s;
+}
+.App-item-title:hover{
+  color: #46d0ff;
+}
+
+.App-item-popularity{
+  color: #46d0ff;
+}
+
+.App-item-price{
+
 }
 

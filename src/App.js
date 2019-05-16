@@ -1,9 +1,14 @@
 import React, {Component} from 'react';
 import './App.css';
 import axios from 'axios';
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom'
 
 import Header from './components/Header';
-import Catagories from './components/Catagories';
+import Home from './Pages/Home';
+import Product from './Pages/Product';
 
 class App extends Component {
   state = {
@@ -26,10 +31,21 @@ class App extends Component {
   render(){
     let data = this.state;
     return (
-      <div className="App">
-        <Header/>
-        <Catagories data={data}/>
-      </div>
+      <Router>
+        <div className="App">
+          <Header/>
+          <Route exact path={`${process.env.PUBLIC_URL}/`} 
+            render ={() => <Home
+            data={data}/>}/>
+            <Route exact path={`${process.env.PUBLIC_URL}/mobiles`} 
+            render ={() => <Product
+            product={data.mobiles}/>}/>
+            <Route exact path={`${process.env.PUBLIC_URL}/tablets`} 
+            render ={() => <Product
+            product={data.tablets}/>}/>
+        </div>
+      </Router>
+      
     );
   }
 }
