@@ -40,6 +40,7 @@ html{
   padding: 2rem;
   position: relative;
   margin-bottom: 3rem;
+  overflow: hidden;
 }
 
 .App-catagory-heading{
@@ -51,7 +52,6 @@ html{
 .App-catagory-cards{
   display: flex;
   width: 100%;
-  overflow: hidden;
 }
 
 .App-catagory-card{
