@@ -1,33 +1,130 @@
-.App {
-  text-align: center;
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
+html{
+  font-size: 62.5%; /* 1rem = 10px */
+  box-sizing: border-box;
+}
+
+
+.App {
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+  height: 40px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #2874f0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15rem;
+  align-items: center;
+  height: 8rem;
+  margin-bottom: 3rem;
+}
+
+.App-catagory{
+  background: #fff;
+  margin: 0 15rem;
+  box-shadow: 0 2rem 5rem rgba(0,0,0,.1);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.App-catagory-heading{
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.App-catagory-cards{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.App-catagory-card{
+  padding: 2rem;
+  min-width: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 1.8rem;
+  transition: all .2s;
 }
 
-.App-link {
-  color: #61dafb;
+.App-catagory-card:hover{
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-catagory-card img{
+  width: 90%;
 }
+
+.App-catagory-product{
+  margin-top: .5rem;
+}
+
+.App-catagory-price{
+  color: #2874f0;
+}
+
+.App-next{
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.App-next i{
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: #ccc;
+  cursor: pointer;
+}
+.App-next-right{
+  right: 0;
+}
+
+.App-next-left{
+  left: 1rem;
+}
+
+.App-navigation{
+  
+}
+
+.App-navigation-list{
+  display: flex;
+  list-style: none;
+}
+
+.App-navigation-item{
+   font-size: 2.1rem;
+   color: #fff;
+   text-transform: uppercase;
+   margin-left: 2rem;
+   cursor: pointer;
+   height: 8rem;
+   display: flex;
+   align-items: center;
+   padding: 0 1.5rem;
+   transition: all .2s;
+
+}
+
+.App-navigation-item:hover{
+  background-color: #46d0ff;
+  color: #ccc;
+}
+
