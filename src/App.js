@@ -17,7 +17,7 @@ class App extends Component {
     tablets: []
   }
   componentDidMount = async () => {
-    let url = 'https://s3.ap-south-1.amazonaws.com/ss-local-files/products.json'
+    let url = 'https://smartserv-5-server.herokuapp.com/products'
     let response = await axios.get(url)
     let products = await response.data.products
     var result = Object.values(products);
