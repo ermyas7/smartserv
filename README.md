@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## AProject URL
+[https://smartserv-5.herokuapp.com/](https://smartserv-5.herokuapp.com/) to view it in the browser.
+
 
 ## Available Scripts
 
